@@ -1,4 +1,27 @@
 <main>
   <p id="notice"></p>
   <%= render 'list', user: @user %>
+
+  <div class="col-md-8" offset-md-1>
+    <h2>Books</h2>
+    <table class="table table-hover table-inverse">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Title</th>
+          <th>Opinion</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @books.each do |list| %>
+        <tr>
+          <td></td>
+          <td><%= book.title %></td>
+			    <td><%= book.body %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </main>
