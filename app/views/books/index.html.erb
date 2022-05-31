@@ -2,7 +2,7 @@
   <p id="notice"></p>
   <%= render 'list', user: @user %>
 
-  <div class="col-md-8" offset-md-1>
+  <div class="col-md-8 offset-md-1">
     <h2>Books</h2>
     <table class="table table-hover table-inverse">
       <thead>
@@ -16,9 +16,9 @@
       <tbody>
         <% @books.each do |list| %>
         <tr>
-          <td></td>
-          <td><%= book.title %></td>
-			    <td><%= book.body %></td>
+          <td><%= image_tag @user.get_profile_image(100,100) %></td>
+          <td><%= @book.title %></td>
+			    <td><%= @book.body %></td>
         </tr>
         <% end %>
       </tbody>

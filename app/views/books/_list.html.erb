@@ -5,14 +5,14 @@
 
         <table class="table">
           <tbody>
-            <tr></tr>
+            <tr><%= image_tag user.get_profile_image(100,100) %></tr>
             <tr>
               <th>name</th>
               <th><%= current_user.name %></th>
             </tr>
             <tr>
               <th>introduction</th>
-              <th></th>
+              <th><%= current_user.introduction %></th>
             </tr>
           </tbody>
         </table>

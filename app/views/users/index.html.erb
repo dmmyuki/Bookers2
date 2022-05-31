@@ -1,5 +1,7 @@
 <main>
   <p id="notice"></p>
+  <%= render 'books/list', user: @user %>
+
   <div class="col-md-8 offset-md-1">
     <h2>Users</h2>
     <table class="table">
@@ -10,14 +12,13 @@
           <th colspan="3"></th>
         </tr>
         <tbody>
+          <% @users.each do |user| %>
           <tr>
-            <!--ユーザー画像-->
-            <td></td>
-            <!--ユーザーネーム-->
-            <td></td>
-            <!--ユーザーの詳細ページへのリンク-->
-            <td></td>
+            <td><%= image_tag user.get_profile_image(100,100) %></td>
+            <td><%= user.name %></td>
+            <td><%= link_to "Show", user_path(user.id) %></td>
           </tr>
+          <% end %>
         </tbody>
       </thead>
     </table>
