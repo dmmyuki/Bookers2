@@ -1,11 +1,21 @@
 <!--<div class="container px-5 px-sm-0">-->
 <!--    <div class="row">-->
+
+
       <div class="col-md-3">
+        <% if @book.errors.any? %>
+          <%= @book.errors.count %>errors prohibited this obj from being saved:
+          <ul>
+            <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>
         <h2>User info</h2>
 
         <table class="table">
           <tbody>
-            <tr><%= image_tag user.get_profile_image(100,100) %></tr>
+            <tr><%= image_tag @user.get_profile_image(100,100) %></tr>
             <tr>
               <th>name</th>
               <th><%= current_user.name %></th>
@@ -17,7 +27,7 @@
           </tbody>
         </table>
         <div class="row">
-          <%= link_to "編集", edit_user_path(user.id) %>
+          <%= link_to "編集", edit_user_path(@user.id) %>
           <!--<a class="btn btn-outline-secondary btn-block edit_user_path(user.id)"></a>-->
             <!--<svg class="svg-inline--fa fa-user-cog fa-w-20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg>-->
               <!--::before-->
