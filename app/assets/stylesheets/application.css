@@ -31,7 +31,7 @@ body {
   background-color:#fff;
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+footer, header, main, nav {
   display:block;
 }
 
@@ -131,7 +131,7 @@ ul {
 }
 
 .text-light {
-  color:#f8f9fa!important;
+  color:#f8f9fa;
 }
 
 .nav-link {
