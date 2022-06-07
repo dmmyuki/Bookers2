@@ -125,6 +125,10 @@ ul {
   margin-top:0;
 }
 
+.nav-link .text-light {
+  text-decoration: none;
+}
+
 .navbar-nav .nav-link {
   padding-right:0;
   padding-left:0;
@@ -185,3 +189,4 @@ table {
   vertical-align:top;
   border-top:1px solid #dee2e6;
 }
+

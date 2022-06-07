@@ -38,8 +38,9 @@ class UsersController < ApplicationController
 
   def baria_user
     @user=User.find(params[:id])
-    @user=current_user
-    redirect_to(books_path) unless @user
+    if current_user.id!=@user.id
+      redirect_to(user_path(current_user.id))
+    end
   end
 
 end
