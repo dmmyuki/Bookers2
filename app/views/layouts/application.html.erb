@@ -24,49 +24,49 @@
               <% if user_signed_in? %>
                 <li class="nav-link text-light">
                   <%= link_to user_path(current_user.id) do %>
-                    <span class="fa-solid fa-house-chimney"></span>Home
+                    <span class="fas fa-home"></span>Home
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to users_path do %>
-                    <span class="fa-solid fa-users"></span>Users
+                    <span class="fas fa-users"></span>Users
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to books_path do %>
-                    <span class="fa-solid fa-book-open"></span>Books
+                    <span class="fas fa-book-open"></span>Books
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to destroy_user_session_path, method: :delete do %>
-                    <span class="fa-solid fa-right-from-bracket"></span>Log out
+                    <span class="fas fa-sign-out-alt"></span>Log out
                   <% end %>
                 </li>
               <% else %>
                 <li class="nav-link text-light">
                   <%= link_to root_path do %>
-                    <span class="fa-solid fa-house-chimney"></span>Home
+                    <span class="fas fa-home"></span>Home
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to about_path do %>
-                    <span class="fa-solid fa-link"></span>About
+                    <span class="fas fa-link"></span>About
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to new_user_registration_path do %>
-                    <span class="fa-solid fa-user-plus"></span>Sign up
+                    <span class="fas fa-user-plus"></span>Sign up
                   <% end %>
                 </li>
 
                 <li class="nav-link text-light">
                   <%= link_to new_user_session_path do %>
-                    <span class="fa-solid fa-right-to-bracket"></span>Log in
+                    <span class="fas fa-sign-in-alt"></span>Log in
                   <% end %>
                 </li>
               <% end %>
